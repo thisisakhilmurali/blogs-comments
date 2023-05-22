@@ -17,7 +17,6 @@ public class BlogController {
     @Autowired
     private BlogService blogService;
 
-
     @PostMapping("/addblog")
     public ResponseEntity<Blog> saveBlog(@RequestBody @Valid BlogRequest blogRequest) {
         return new ResponseEntity<>(blogService.saveBlog(blogRequest), HttpStatus.CREATED);
